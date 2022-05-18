@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Figma to html</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+        <style>
+            :root{
+                --color-primary:#6070FF;
+                --color-neutrals:#344563;
+                --color-primary4:#EBEBFF;
+                --color-neutrals1:#091E42;
+                --color-neutals6:#6B778C;
+                --color-neutralsn:#C1C7D0;              
+                --color-primary2:#396DF2;
+                --color-white:#ffffff;
+                --color-background: #E5E5E5;
+            }
+            .colp{
+                color: var(--color-primary);
+            }
+            .coln{
+                color: var(--color-neutrals);
+            }
+            .coln1{
+                color: var(--color-neutrals1);
+            }
+            .colp2b{
+                background-color: var(--color-primary2);
+            }
+            .colp4b{
+                background-color: var(--color-primary4);
+            }
+            *{
+                box-sizing: border-box;
+                margin: 0;
+                padding: 0;
+                text-decoration: none;
+                outline: none;
+                list-style: none;
+                border: 0;
+            }
+            a{
+                 color: inherit;
+                text-decoration: none;
+            }
+            html{
+                width: 100vw;
+                 height: 100vh;
+                 font-size: 62.5%;
+
+            }
+            body{
+                font-family: Poppins, sans-serif;
+                 overflow-x: hidden;
+                background-color: var(--color-background);
+                font-size: 62.5%;
+
+            }
+            header{
+                background-color: var(--color-white);
+                display: flex;
+                justify-content: space-between;
+                padding: 1rem 13rem ;
+                line-height: 2rem;
+                font-size: 1.5rem;
+                align-items: center;
+                text-align: center;
+            }
+            header .logo{
+                font-size: 1.8rem;
+            }
+            header .flex{
+                display: flex;
+                gap: 3rem;
+            }
+
+            /***End of header****/
+
+            /***Beginning of box1***/
+
+            /***for the background***/
+            .ellipse{
+                position: absolute;
+            }
+            .rectangle{
+                position: absolute;
+            }
+            .ellipse.eleven{
+                height: 4rem;
+                width: 8rem;
+                border-radius: 0 0 10rem 10rem;
+                background-color: var(--color-primary2);
+                transform: rotate(15deg);
+                top: 18%;
+                left: 5%;
+            }
+            .ellipse.three{
+                height: 14rem;
+                width: 10rem;
+                left: 90%;
+                top: 15%;
+                transform: rotate(-70deg);
+            }
+            .ellipse.five{
+                height: 2.3rem;
+                width: 2.3rem;
+                border-radius: 50%;
+                left: 50%;
+                top: 20%;
+            }
+              
+            .ellipse.four{
+                height: 4.7rem;
+                width: 4.7rem;
+                border-radius: 50%;
+                top: 80%;
+                left: 70%;
+            }
+            .ellipse.twelve{
+                width: 3.7rem;
+                height: 1.9rem;
+                border-radius: 0 0 10rem 10rem;
+                left: 27rem;
+                top: 80%;
+                background-color: var(--color-primary2);
+            }
+            .ellipse.thirteen{
+                height: 2rem;
+                width: 2rem;
+                left: 27rem;
+                top: calc(80% + 1.2rem);
+                transform: rotate(5deg);
+
+            }
+              .rectangle.five{
+                width: 16.8rem;
+                height: 2.9rem;
+                transform: rotate(23.34deg);
+                top: calc(80% + 2.2rem);
+                left: calc(70% - 12rem);
+            }
+            .backgrounds .rectangle.six{
+                height: 2rem;
+                width: 10.8rem;
+                left: 2%;
+                top: 14%;
+                transform: rotate(-46deg);
+            }
+            .backgrounds .rectangle.four{
+                width: 20rem;
+                height: 3rem;
+                left: 83%;
+                top: 14%;
+                transform: rotate(-30deg);
+            }
+            .rectangle.seven{
+                width: 5.6rem;
+                height: 1rem;
+                left: 48.5%;
+                top: 19%;
+                transform: matrix(0.98, -0.21, -0.21, -0.98, 0, 0);
+            }
+            .backgrounds .ellipse.three svg circle{
+                fill: none;
+                stroke: var(--color-primary2);
+                stroke-width: 28;
+                transform: translate(15px,15px);
+                stroke-dasharray: 110;
+                stroke-dashoffset: 92;
+            }
+            .ellipse.thirteen svg circle{
+                fill: none;
+                stroke: var(--color-primary4);
+                stroke-width: 14;
+                transform: translate(5px,5px);
+                stroke-dasharray: 110;
+                stroke-dashoffset: 122;
+            }
+            /***end of background***/
+            .container .box1{
+                background-color: var(--color-white);
+                border-bottom-left-radius: 100px;
+                position: relative;
+
+            }
+            .container .box1 .innerbox{
+                padding: 22rem 26rem 20rem;
+
+            }
+            .container .box1 .boxhead{
+                font-size: 4.8rem;
+                font-weight: 700;
+            }
+            .container .box1 .boxcontent{
+                font-size: 2rem;
+                margin: 1% auto;
+            }
+            .container .box1 .connect{
+                font-size: 1.6rem;
+            }
+            .container .box1 .connectlogos{
+                display: flex;
+                padding: 2rem 0;
+                gap: 1.5rem;
+            }
+            .container .box1 .connectlogos img{
+                width: 2rem;
+                height: 2rem;
+            }
+            /****End of box1****/
+            /****start of samples****/
+            .samples>div{
+                margin: 14.2rem;
+                background-color: white;
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                padding: 2.4rem;
+                border-radius: 2.4rem;
+            }
+            .samples>div .wordy{
+                margin: 2.4rem 2.2rem;
+            }
+            .samples>div .left.wordy{
+                padding-right: 2.4rem;
+            }
+            .samples img{
+                height: 44.8rem;
+                max-width: 54.4rem;
+                width: 100%;
+                border-radius: 8px;
+            }
+            .samples .head{
+                font-weight: 700;
+                color: var(--color-neutrals1);
+                font-size: 4rem;
+                padding-top:2.4rem;
+                padding-bottom: 0.9rem;
+            }
+            .samples .samflex{
+                display: flex;
+                gap: 1.2rem;
+                font-size: 1.8rem;
+                line-height: 2.4rem;
+                justify-items: center;
+                align-items: center;
+                margin-bottom: 3.2rem;
+            }
+            .samples .samflex .word{
+                font-weight: 500;
+                color: var(--color-neutrals);
+                text-transform: uppercase;
+            }
+            .samples .samflex .des, 
+            .samples .samflex .year{
+                font-weight: 400;
+                color:var(--color-neutals6) ;
+            }
+            .samples .samflex .circle{
+                width: 0.8rem;
+                height: 0.8rem;
+                border-radius: 50%;
+                background-color:var(--color-neutralsn) ;
+            }
+            .samples>div .body{
+                font-size: 1.6rem;
+                line-height: 2.4rem;
+                font-weight: 400;
+                color: var(--color-neutrals);
+            }
+            .samples>div .langflex{
+                display: flex;
+                gap:0.8rem;
+                align-items: center;
+                justify-items: center;
+                padding-top: 2.8rem;
+                color: var(--color-primary);
+            }
+            .samples>div .langflex>div{
+                padding:0.4rem 1.2rem;
+                font-size: 1.2rem;
+                line-height: 1.6rem;
+                font-weight: 500;
+                width: max-content;
+                background-color:var(--color-primary4) ;
+                border-radius:0.8rem;
+            }
+            .samples>div .btn{
+                color: var(--color-primary2);
+                font-size: 1.7rem;
+                line-height: 2.4rem;
+                font-weight: 500;
+                margin-top: 4.2rem;
+                padding: 1rem;
+                border: 2px solid var(--color-primary);
+                width: max-content;
+                border-radius: 1rem;
+                transition: all 300ms ease;
+                }
+            .samples>div .btn:hover{
+                background-color: var(--color-primary);
+                color: var(--color-white);
+            }
+            /****End of samples****/
+        </style>
+    </head>
+    <body>
+        <header>
+            <div class="logo colp">My Logo</div>
+            <div class="flex coln">
+                <div>Portfolio</div>
+                <div>About</div>
+                <div>Contact</div>
+            </div>
+        </header>
+        <div class="container">
+            <div class="box1">
+                <div class="backgrounds">
+                    <div class="ellipse eleven"></div>
+                    <div class="ellipse three"> <svg>
+                        <circle cx="38" cy="38" r="36"> </circle>
+                    </svg></div>
+                    <div class="ellipse five colp2b"></div>
+                    <div class="ellipse twelve colp4"></div>
+                    <div class="ellipse thirteen ">
+                        <svg><circle cx="38" cy="38" r="36"> </circle></svg>
+
+                    </div>
+                    <div class="rectangle six colp4b"></div>
+                    <div class="rectangle seven colp2b"></div>
+                    <div class="rectangle four colp4b"></div>
+                    <div class="ellipse four colp2b"></div>
+                    <div class="rectangle five colp4b"></div>
+                </div>
+                <div class="innerbox">
+                <div class="boxhead coln">I'm Alexandra<br/>Glad to see you</div>
+                <div class="boxcontent coln1">I'm a software developer! I can help you build a product ,
+                     feature or website Look through some of my work and experience! 
+                     If you like what you see and have a project you need coded, 
+                    don't hestiate to contact me.</div>
+                <div class="connect colp">LET'S CONNECT</div>
+                <div class="connectlogos">
+                    <img src="twitter.svg">
+                    <div><img src="Vector.svg"><img src="Vector[1].svg"></div>
+                    <img src="medium.svg">
+                    <img src="github.svg">
+                    <img src="angellist.svg">
+                </div>
+                </div>
+            </div>
+            <div class="samples">
+                <div class="wrapper1">
+                    <div class="left">
+                        <img src="Snapshoot Portfolio.png">
+                    </div>
+                    <div class="right wordy">
+                        <div class="head">Tonic</div>
+                        <div class="samflex">
+                            <div class="word">canopy</div>
+                            <div class="circle"></div>
+                            <div class="des">Back End Dev</div>
+                            <div class="circle"></div>
+                            <div class="year">2015</div>
+                        </div>
+                        <div class="body">
+                            A daily selection of privately personalized reads; no accounts or sign-ups required.
+                        </div>
+                        <div class="langflex">
+                            <div>html</div>
+                            <div>css</div>
+                            <div>javascript</div>
+                        </div>
+                        <div class="btn">See Project</div>
+                    </div>
+                </div>
+                <div class="wrapper2">
+                    <div class="left wordy">
+                        <div class="head">Multi-Post Stories</div>
+                        <div class="samflex">
+                            <div class="word">facebook</div>
+                            <div class="circle"></div>
+                            <div class="des">Full Stack Dev</div>
+                            <div class="circle"></div>
+                            <div class="year">2015</div>
+                        </div>
+                        <div class="body">
+                            Experimental content creation feature that allows users to add to an existing story over
+                             the course of a day without spamming their friends.
+                        </div>
+                        <div class="langflex">
+                            <div>html</div>
+                            <div>Ruby on rails</div>
+                            <div>css</div>
+                            <div>javascript</div>
+                        </div>
+                        <div class="btn">See Project</div>
+                    </div>
+                    <div class="right">
+                        <img src="Snapshoot Portfolio4.png">
+                    </div>
+                </div>
+                <div class="wrapper3">
+                    <div class="left">
+                        <img src="Snapshoot Portfolio3.png">
+                    </div>
+                    <div class="right wordy">
+                        <div class="head">Facebook 360</div>
+                        <div class="samflex">
+                            <div class="word">facebook</div>
+                            <div class="circle"></div>
+                            <div class="des">Full Stack Dev</div>
+                            <div class="circle"></div>
+                            <div class="year">2015</div>
+                        </div>
+                        <div class="body">
+                            Exploring the future of media in Facebook's first Virtual Reality app; 
+                            a place to discover and enjoy 360 photos and videos on Gear VR.
+                        </div>
+                        <div class="langflex">
+                            <div>html</div>
+                            <div>Ruby on rails</div>
+                            <div>css</div>
+                            <div>javascript</div>
+                        </div>
+                        <div class="btn">See Project</div>
+                    </div>
+                </div>
+                <div class="wrapper4">
+                    <div class="left wordy">
+                        <div class="head">Uber navigation</div>
+                        <div class="samflex">
+                            <div class="word">Uber</div>
+                            <div class="circle"></div>
+                            <div class="des">Lead developer</div>
+                            <div class="circle"></div>
+                            <div class="year">2018</div>
+                        </div>
+                        <div class="body">
+                            A smart assistant to make driving more safe, efficient, and fun by unlocking your most expensive computer: your car.
+                        </div>
+                        <div class="langflex">
+                            <div>html</div>
+                            <div>Ruby on rails</div>
+                            <div>css</div>
+                            <div>javascript</div>
+                        </div>
+                        <div class="btn">See Project</div>
+                    </div>
+                    <div class="right">
+                        <img src="Snapshoot Portfolio5.png">                       
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            console.log(window.innerWidth)          </script>
+    </body>
+</html>
