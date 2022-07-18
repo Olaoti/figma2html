@@ -20,7 +20,10 @@
             --color-white: #ffffff;
             --color-background: #E5E5E5;
         }
-
+        a{
+            text-decoration: none;
+            color:inherit;
+        }
         .colp {
             color: var(--color-primary);
         }
@@ -62,7 +65,7 @@
             width: 100vw;
             height: 100%;
             font-size: 62.5%;
-
+            scroll-behavior: smooth;
         }
 
         .btn {
@@ -118,7 +121,13 @@
         header .flex {
             display: flex;
         }
-        header .flex>div:not(:last-child){
+        header .flex>a{
+            transition: all 300ms ease;
+        }
+        header .flex>a:hover{
+            color: var(--color-primary);
+        }
+        header .flex>a:not(:last-child){
             margin-right: 3rem;
         }
         header .icon{
@@ -344,7 +353,7 @@
         .connectlogos {
             display: flex;
         }
-        .connectlogos>div:not(:last-child){
+        .connectlogos>a:not(:last-child){
             margin-right: 1.5rem;
         }
         .connectlogos img {
@@ -377,7 +386,7 @@
 
         .samples img {
             height: 44.8rem;
-            max-width: 54.4rem;
+            max-width: 70rem;
             width: 100%;
             border-radius: 8px;
         }
@@ -435,12 +444,13 @@
             padding-top: 2.8rem;
             color: var(--color-primary);
         }
+     
         .samples>div .langflex>div:not(:last-child){
             margin-right: 0.8rem;
         }
         .samples>div .langflex>div {
             padding: 0.4rem 1.2rem;
-            font-size: 1.2rem;
+            font-size: 1.4rem;
             line-height: 1.6rem;
             font-weight: 500;
             width: max-content;
@@ -472,6 +482,7 @@
         }
 
         .box2 .body {
+            width: 100%;
             font-size: 1.6rem;
             line-height: 2.4rem;
             font-weight: 400;
@@ -499,8 +510,8 @@
         }
 
         .box2 .right .langflex {
-            display: flex;
-            gap: 1.2rem;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
             padding: 3.6rem 0 1.2rem;
             align-items: center;
         }
@@ -508,10 +519,11 @@
         .box2 .right .langflex>div {
             display: flex;
             flex-direction: column;
-            gap: 1.6rem;
-            padding: 1.2rem;
-            width: 12.2rem;
-            height: 12rem;
+            align-items: center;
+            margin: 0.6rem;
+            padding: 1.6rem 3.6rem;
+            width: fit-content;
+            height: fit-content;
             font-size: 1.5rem;
             line-height: 2rem;
             color: #253858;
@@ -522,6 +534,7 @@
         .box2 .right .langflex img {
             height: 4.8rem;
             width: 4.8rem;
+            margin-bottom: 1rem;
             border: 1px solid var(--color-white);
             border-radius: 50%;
         }
@@ -657,6 +670,9 @@
         .box1 .rectangle.six {
             display: none;
         }
+        .box2 .right .langflex>div{
+            padding: 1rem 2.4rem;
+        }
         .box3 .ellipse.thirteen {
             height: 3.5rem;
             width: 3.5rem;
@@ -701,6 +717,30 @@
             .phone{
                 display: contents;
             }
+            .cancel>span,.icon-menu>span{
+                display: block;
+                width: 2.8rem;
+                height: .5rem;
+                border-radius: 3rem;
+                background-color: var(--color-primary2);
+            }
+            .icon-menu>span:not(:last-child){
+                margin-bottom: .3rem;
+            }
+            .cancel>span{
+                background-color: var(--color-white);
+            }
+            .cancel{
+                display: grid;
+                justify-content: right;
+            }
+            .cancel>span:first-child{
+                transform: rotate(45deg);
+            }
+            .cancel>span:last-child{
+                transform: rotate(-45deg);
+                margin-top: -.25rem;
+            }
             .ellipse, .rectangle, .laptop{
                display: none;
             }
@@ -737,7 +777,12 @@
                 font-weight: 600;
                 font-size: 3.2rem;
             }
-            header .flex>div:not(:last-child){
+            header .flex>a:hover{
+            color: var(--color-background);
+            padding-left: 2rem;
+            transition: all 300ms ease;
+        }
+            header .flex>a:not(:last-child){
             margin-right: 0;
             margin-bottom: 4rem;
         }
@@ -769,15 +814,24 @@
                 margin: 8.2rem;
                
             }
+            
         .container .box2 {
             grid-template-columns: 1fr;
-            padding: 8.2rem;
+            padding: 6.2rem;
         }
+        
         .container .box2 .top{
             display: flex;
             justify-content: space-between;
         }
-       
+       /* .box2 .right .langflex{
+            grid-template-columns: 1fr 1fr;
+        }
+       .box2 .right .langflex>div{
+        margin:0.3rem;
+        padding: .1rem;
+        flex-direction: row;
+       }*/
         .samples>div {
             margin: 1.6rem;
             padding: 2.4rem;
@@ -798,7 +852,7 @@
             padding: 1.2rem 2.4rem 2.4rem;
         }
         }
-        @media screen and (max-width:500px){
+        @media screen and (max-width:600px){
            
             .container .box1 .innerbox{
                 padding: 18rem 2.4rem 13rem;
@@ -836,9 +890,10 @@
         }
 
         .samples img {
-            height: 22rem;
-            max-width: 29.5rem;
+            height: fit-content;
+            max-width: 100%;
             width: 100%;
+            object-fit: contain;
             border-radius: 8px;
         }
 
@@ -871,11 +926,10 @@
         }
        
         .box2 .right .langflex {
-            flex-direction: column;
+            grid-template-columns: 1fr ;
             gap: 1.2rem;
             padding:1.2rem;
         }
-
         .box2 .right .langflex>div {
             display: flex;
             flex-direction: row;
@@ -922,6 +976,7 @@
             width: 100%;
             max-width: 32.7rem;
             margin-bottom: 2rem;
+            
         }
         }
         /***git add --all to add new files***/
@@ -930,12 +985,12 @@
 
 <body>
     <header>
-        <div class="logo colp"><span>My logo</span><span class="icon material-icons">format_align_justify</span> </div>
+        <div class="logo colp"><span>My logo</span><span class="icon-menu"><span></span><span></span><span></span></span> </div>
         <div class="flex none coln">
-            <div class="cancel"><span class="icon material-icons">close</span></div>
-            <div>Portfolio</div>
-            <div>About</div>
-            <div>Contact</div>
+            <div class="cancel"><span></span><span></span></div>
+            <a href="#portfolio"><div>Portfolio</div></a>
+            <a href="#about"><div>About</div></a>
+            <a href="#contact"><div>Contact</div></a>
         </div>
     </header>
     <div class="container">
@@ -960,147 +1015,160 @@
                 <div class="rectangle five colp4b"></div>
             </div>
             <div class="innerbox">
-                <div class="boxhead coln"> I'm <span class="laptop">Alexander</span><span class="phone">Marriane</span><br />Glad to see you!</div>
-                <div class="boxcontent coln1">I'm a software developer! I can help you build a product ,
-                    feature or website Look through some of my work and experience!
+                <div class="boxhead coln"> I'm <span class="laptop">Omotola</span><br />Glad to see you!</div>
+                <div class="boxcontent coln1">I'm a frontend developer! I build fully responsive websites with well structured layout. Look through some of my work and experience!
                     If you like what you see and have a project you need coded,
-                    don't hestiate to contact me.</div>
-                <div class="connect colp">LET'S CONNECT</div>
+                    Don't hestiate to contact me.</div>
+                <a href="#contact"><div class="connect colp">LET'S CONNECT</div></a>
                 <div class="connectlogos">
-                    <div><img src="twitter.svg"></div>
-                    <div><img src="Vector.svg"><img src="Vector[1].svg"></div>
-                    <div><img src="medium.svg"></div>
-                    <div><img src="github.svg"></div>
-                    <div><img src="angellist.svg"></div>
+                    <a href="#"><div><img src="twitter.svg"></div></a>
+                    <a href="https://www.linkedin.com/in/omotola-olaoti-323a27240/"><div><img src="linkedin.svg"></div></a>
+                    <a href="https://wa.me/+2349069423456"><div><img src="whatsapp.svg"></div></a>
+                    <a href="https://github.com/Olaoti"><div><img src="github.svg"></div></a>
+                    <a href="https://fiverr.com/sus_ana"><div><img src="fiverr.svg"></div></a>
                 </div>
             </div>
         </div>
-        <div class="samples">
+        <div class="samples" id="portfolio">
             <div class="wrapper1">
                 <div class="left">
-                    <img src="Snapshoot Portfolio.png">
+                    <img src="netflix.PNG">
                 </div>
                 <div class="right wordy">
-                    <div class="head">Tonic</div>
+                    <div class="head">Netflix clone</div>
                     <div class="samflex">
-                        <div class="word">canopy</div>
+                        <div class="word">Netflix</div>
                         <div class="circle"></div>
-                        <div class="des">Back End Dev</div>
+                        <div class="des">Front End Dev</div>
                         <div class="circle"></div>
-                        <div class="year">2015</div>
+                        <div class="year">2022</div>
                     </div>
                     <div class="body">
-                        A daily selection of privately personalized reads; no accounts or sign-ups required.
+                        A clone of the netflix website, functioning on all devices. Datas are generated using axios from TMDB and are automatically updated.
                     </div>
                     <div class="langflex">
-                        <div>html</div>
+                        <div>react</div>
                         <div>css</div>
-                        <div>javascript</div>
                     </div>
-                    <div class="btn">See Project</div>
+                    <a href="https://th-netflix-clone.netlify.app/" target="_blank"><div class="btn">See Project</div></a>
                 </div>
             </div>
             <div class="wrapper2">
                 <div class="right phone">
-                    <img src="Snapshoot Portfolio4.png">
+                    <img src="enver.PNG">
                 </div>
                 <div class="left wordy">
-                    <div class="head">Multi-Post Stories</div>
+                    <div class="head">Enver</div>
                     <div class="samflex">
-                        <div class="word">facebook</div>
+                        <div class="word">Portfolio</div>
                         <div class="circle"></div>
-                        <div class="des">Full Stack Dev</div>
+                        <div class="des">Front end Dev</div>
                         <div class="circle"></div>
-                        <div class="year">2015</div>
+                        <div class="year">2022</div>
                     </div>
                     <div class="body">
-                        Experimental content creation feature that allows users to add to an existing story over
-                        the course of a day without spamming their friends.
+                        Figma design of a digital company portfolio converted to pixel perfect react website. Clean UI and responsive on all screen sizes.
                     </div>
                     <div class="langflex">
-                        <div>html</div>
-                        <div class="laptop">Ruby on rails</div>
-                        <div>css</div>
-                        <div>javascript</div>
+                        <div>React</div>
+                        <div>scss</div>
                     </div>
-                    <div class="btn">See Project</div>
+                    <a href="https://envert.netlify.app/" target="_blank"><div class="btn">See Project</div></a>
                 </div>
                 <div class="right laptop">
-                    <img src="Snapshoot Portfolio4.png">
+                    <img src="enver.PNG">
                 </div>
             </div>
             <div class="wrapper3">
                 <div class="left">
-                    <img src="Snapshoot Portfolio3.png">
+                    <img src="dashboard.png">
                 </div>
                 <div class="right wordy">
-                    <div class="head">Facebook 360</div>
+                    <div class="head">Dashboard</div>
                     <div class="samflex">
-                        <div class="word">facebook</div>
+                        <div class="word">Dahboard</div>
                         <div class="circle"></div>
-                        <div class="des">Full Stack Dev</div>
+                        <div class="des">frontend Dev</div>
                         <div class="circle"></div>
-                        <div class="year">2015</div>
+                        <div class="year">2022</div>
                     </div>
                     <div class="body">
-                        Exploring the future of media in Facebook's first Virtual Reality app;
-                        a place to discover and enjoy 360 photos and videos on Gear VR.
+                        Clean dashboard with reusable components! Easy to work on by the baskend developer, only to be viewed on desktop or laptop
                     </div>
                     <div class="langflex">
-                        <div>html</div>
-                        <div class="laptop">Ruby on rails</div>
-                        <div>css</div>
-                        <div>javascript</div>
+                        <div class="laptop">React</div>
+                        <div>Scss</div>
                     </div>
-                    <div class="btn">See Project</div>
-                </div>
+                    <a href="https://susdashboard.netlify.app" target="_blank"><div class="btn">See Project</div>
+                </div></a>
             </div>
             <div class="wrapper4">
                 <div class="right phone">
-                    <img src="Snapshoot Portfolio5.png">
+                    <img src="houter.PNG">
                 </div>
                 <div class="left wordy">
-                    <div class="head">Uber navigation</div>
+                    <div class="head">Houter</div>
                     <div class="samflex">
-                        <div class="word">Uber</div>
+                        <div class="word">Housing agent</div>
                         <div class="circle"></div>
-                        <div class="des">Lead developer</div>
+                        <div class="des">Front end dev</div>
                         <div class="circle"></div>
-                        <div class="year">2018</div>
+                        <div class="year">2021</div>
                     </div>
                     <div class="body">
-                        A smart assistant to make driving more safe, efficient, and fun by unlocking your most expensive
-                        computer: your car.
+                        An housing agency website built to showcase houses and guide users on how to buy or sell from the agency.  
                     </div>
                     <div class="langflex">
-                        <div>html</div>
-                        <div class="laptop">Ruby on rails</div>
+                        <div>React</div>
+                        <div>css</div>
+                    </div>
+                    <a href="https://houter.netlify.app" target="_blank"><div class="btn">See Project</div></a>
+                </div>
+                <div class="right laptop">
+                    <img src="houter.PNG">
+                </div>
+            </div>
+            <div class="wrapper5">
+                <div class="left">
+                    <img src="laundry.PNG">
+                </div>
+                <div class="right wordy">
+                    <div class="head">Taria Laundry</div>
+                    <div class="samflex">
+                        <div class="word">Laundry </div>
+                        <div class="circle"></div>
+                        <div class="des">Front End Dev</div>
+                        <div class="circle"></div>
+                        <div class="year">2021</div>
+                    </div>
+                    <div class="body">
+                        A website for laundry services meant to guide user on how to get their laundrie done, and also for payment purpose
+                    </div>
+                    <div class="langflex">
+                        <div>Html</div>
                         <div>css</div>
                         <div>javascript</div>
                     </div>
-                    <div class="btn">See Project</div>
-                </div>
-                <div class="right laptop">
-                    <img src="Snapshoot Portfolio5.png">
+                    <a href="https://tarialaundry.netlify.app" target="_blank"><div class="btn">See Project</div></a>
                 </div>
             </div>
         </div>
-        <div class="footer">
+        <div class="footer" id="about">
             <div class="box2">
                 <div class="left">
                     <div class="head">About<br>Myself</div>
                     <div class="body">
-                        Hello I'm a software developer! I can help you build a product , feature or website Look through
+                        Hello! I'm a frontend webite developer! I build websites with clean UI and improved user experience. Check out
                         some of my work and experience!
                         If you like what you see and have a project you need coded, don't hestiate to contact me.
                     </div>
                     <div class="connect colp">LET'S CONNECT</div>
                     <div class="connectlogos">
-                        <div><img src="twitter.svg"></div>
-                        <div><img src="Vector.svg"><img src="Vector[1].svg"></div>
-                        <div><img src="medium.svg"></div>
-                        <div><img src="github.svg"></div>
-                        <div><img src="angellist.svg"></div>
+                        <a href="#"><div><img src="twitter.svg"></div></a>
+                        <a href="https://www.linkedin.com/in/omotola-olaoti-323a27240/"><div><img src="linkedin.svg"></div></a>
+                        <a href="https://wa.me/+2349069423456"><div><img src="whatsapp.svg"></div></a>
+                        <a href="https://github.com/Olaoti"><div><img src="github.svg"></div></a>
+                        <a href="https://fiverr.com/sus_ana"><div><img src="fiverr.svg"></div></a>
                     </div>
                     <div class="btn">Get My Resume</div>
                 </div>
@@ -1121,6 +1189,10 @@
                             <img src="Ellipse 1 (2).png">
                             <div>Css</div>
                         </div>
+                        <div>
+                            <img src="react.svg">
+                            <div>React</div>
+                        </div>
                     </div>
                     <div class="others">
                         <div>
@@ -1134,7 +1206,7 @@
                     </div>
                 </div>
             </div>
-            <div class="box3">
+            <div class="box3" id="contact">
                 <div class="background">
                     <div class="rectangle seven bbox3"></div>
                     <div class="rectangle six"></div>
@@ -1162,23 +1234,33 @@
 <script>
     var flex = document.querySelector('.flex')
     var container = document.querySelector('.container')
-    var icon = document.querySelector('.icon')
+    var icon = document.querySelector('.icon-menu')
     var logo = document.querySelector('.logo')
-        icon.addEventListener('click', function(){
+        icon.addEventListener('click', function(){            
             flex.classList.add('show')
             flex.classList.remove('none')
             logo.style.display ='none'
+            if(window.innerWidth<850){
             container.style.filter = 'blur(3px)'
-            console.log(flex)
+            }else{
+            container.style.filter = 'none'
+            }
         })
         document.querySelector('.cancel').addEventListener('click', function(){
             flex.classList.remove('show')
             flex.classList.add('none')
             logo.style.display ='flex'
             container.style.filter = 'none'
-
-            console.log(flex)
         })
+        document.querySelectorAll('.flex>a').forEach(link=>{
+            link.addEventListener('click', function(){
+                flex.classList.remove('show')
+            flex.classList.add('none')
+            logo.style.display ='flex'
+            container.style.filter = 'none'
+            })
+        })
+    
 </script>
 </body>
 
