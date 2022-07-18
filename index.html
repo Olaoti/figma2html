@@ -375,7 +375,7 @@
             padding: 2.4rem;
             border-radius: 2.4rem;
         }
-
+       
         .samples>div .wordy {
             margin: 2.4rem 2.2rem;
         }
@@ -383,7 +383,9 @@
         .samples>div .left.wordy {
             padding-right: 2.4rem;
         }
-
+        .samples>div:nth-child(2n) .right{
+            order: 1;
+        }
         .samples img {
             height: 44.8rem;
             max-width: 70rem;
@@ -429,7 +431,7 @@
             border-radius: 50%;
             background-color: var(--color-neutralsn);
         }
-
+        
         .samples>div .body {
             font-size: 1.6rem;
             line-height: 2.4rem;
@@ -444,7 +446,7 @@
             padding-top: 2.8rem;
             color: var(--color-primary);
         }
-     
+        
         .samples>div .langflex>div:not(:last-child){
             margin-right: 0.8rem;
         }
@@ -815,7 +817,9 @@
                 margin: 8.2rem;
                
             }
-            
+            .samples>div:nth-child(2n) .right{
+            order: 0;
+        }
         .container .box2 {
             grid-template-columns: 1fr;
             padding: 6.2rem;
@@ -1055,7 +1059,7 @@
                 </div>
             </div>
             <div class="wrapper2">
-                <div class="right phone">
+                <div class="right">
                     <img src="enver.PNG">
                 </div>
                 <div class="left wordy">
@@ -1076,9 +1080,7 @@
                     </div>
                     <a href="https://envert.netlify.app/" target="_blank"><div class="btn">See Project</div></a>
                 </div>
-                <div class="right laptop">
-                    <img src="enver.PNG">
-                </div>
+              
             </div>
             <div class="wrapper3">
                 <div class="left">
@@ -1104,7 +1106,7 @@
                 </div></a>
             </div>
             <div class="wrapper4">
-                <div class="right phone">
+                <div class="right">
                     <img src="houter.PNG">
                 </div>
                 <div class="left wordy">
@@ -1125,9 +1127,7 @@
                     </div>
                     <a href="https://houter.netlify.app" target="_blank"><div class="btn">See Project</div></a>
                 </div>
-                <div class="right laptop">
-                    <img src="houter.PNG">
-                </div>
+               
             </div>
             <div class="wrapper5">
                 <div class="left">
