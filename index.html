@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>Figma to html</title>
+    <title>Omotola portfolio</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -60,7 +60,9 @@
             color: inherit;
             text-decoration: none;
         }
-
+        .langflex>div{
+            text-transform: capitalize;
+        }
         html {
             width: 100vw;
             height: 100%;
@@ -79,6 +81,7 @@
             width: max-content;
             border-radius: 1rem;
             transition: all 300ms ease;
+            cursor: pointer;
         }
 
         .btn:hover {
@@ -383,6 +386,12 @@
         .samples>div .left.wordy {
             padding-right: 2.4rem;
         }
+        .samples>div .btns{
+            display: flex;
+        }
+        .samples>div .btns .git{
+            margin-left: 2rem;
+        }
         .samples>div:nth-child(2n) .right{
             order: 1;
         }
@@ -614,6 +623,9 @@
             background-color: var(--color-white);
             margin: 0 auto;
         }
+        .box3 .btn:hover{
+            background-color: var(--color-background);
+        }
         /****end of box3***/
 
         @media screen and (max-width: 1200px){
@@ -829,14 +841,7 @@
             display: flex;
             justify-content: space-between;
         }
-       /* .box2 .right .langflex{
-            grid-template-columns: 1fr 1fr;
-        }
-       .box2 .right .langflex>div{
-        margin:0.3rem;
-        padding: .1rem;
-        flex-direction: row;
-       }*/
+       
         .samples>div {
             margin: 1.6rem;
             padding: 2.4rem;
@@ -990,7 +995,8 @@
 
 <body>
     <header>
-        <div class="logo colp"><span>My logo</span><span class="icon-menu"><span></span><span></span><span></span></span> </div>
+        <div class="logo colp"><div class="logotext"><span class="logo-first-letters">Ol</span><span class="logo-second-letters">ao</span><span class="logo-third-letters">ti</span></div>
+            <div class="icon-menu"><span></span><span></span><span></span></div> </div>
         <div class="flex none coln">
             <div class="cancel"><span></span><span></span></div>
             <a href="#portfolio"><div>Portfolio</div></a>
@@ -1020,13 +1026,13 @@
                 <div class="rectangle five colp4b"></div>
             </div>
             <div class="innerbox">
-                <div class="boxhead coln"> I'm <span class="laptop">Omotola</span><br />Glad to see you!</div>
+                <div class="boxhead coln"> I'm Omotola<br />Glad to see you!</div>
                 <div class="boxcontent coln1">I'm a frontend developer! I build fully responsive websites with well structured layout. Look through some of my work and experience!
                     If you like what you see and have a project you need coded,
                     Don't hestiate to contact me.</div>
                 <a href="#contact"><div class="connect colp">LET'S CONNECT</div></a>
                 <div class="connectlogos">
-                    <a href="#" target="_blank"><div><img src="twitter.svg"></div></a>
+                    <a href="https:twitter.com/therasusa1" target="_blank"><div><img src="twitter.svg"></div></a>
                     <a href="https://www.linkedin.com/in/omotola-olaoti-323a27240/" target="_blank"><div><img src="linkedin.svg"></div></a>
                     <a href="https://wa.me/+2349069423456" target="_blank"><div><img src="whatsapp.svg"></div></a>
                     <a href="https://github.com/Olaoti" target="_blank"><div><img src="github.svg"></div></a>
@@ -1037,25 +1043,28 @@
         <div class="samples" id="portfolio">
             <div class="wrapper1">
                 <div class="left">
-                    <img src="netflix.PNG">
+                    <img src="houter.PNG">
                 </div>
                 <div class="right wordy">
-                    <div class="head">Netflix clone</div>
+                    <div class="head">Houter</div>
                     <div class="samflex">
-                        <div class="word">Netflix</div>
+                        <div class="word">Houter</div>
                         <div class="circle"></div>
-                        <div class="des">Front End Dev</div>
+                        <div class="des">Frontend</div>
                         <div class="circle"></div>
                         <div class="year">2022</div>
                     </div>
                     <div class="body">
-                        A clone of the netflix website, functioning on all devices. Datas are generated using axios from TMDB and are automatically updated.
+                        An housing agency website built to showcase houses and guide users on how to buy or sell from the agency.  
                     </div>
                     <div class="langflex">
-                        <div>react</div>
+                        <div>React</div>
                         <div>css</div>
                     </div>
-                    <a href="https://th-netflix-clone.netlify.app/" target="_blank"><div class="btn">See Project</div></a>
+                    <div class="btns">
+                        <a href="https://houter.netlify.app" target="_blank"><div class="btn">See Project</div></a>
+                        <a href=""><div class="btn git">Github</div></a>
+                    </div>
                 </div>
             </div>
             <div class="wrapper2">
@@ -1065,20 +1074,23 @@
                 <div class="left wordy">
                     <div class="head">Enver</div>
                     <div class="samflex">
-                        <div class="word">Portfolio</div>
+                        <div class="word">Enver</div>
                         <div class="circle"></div>
-                        <div class="des">Front end Dev</div>
+                        <div class="des">Frontend</div>
                         <div class="circle"></div>
-                        <div class="year">2022</div>
+                        <div class="year">March 2022</div>
                     </div>
                     <div class="body">
                         Figma design of a digital company portfolio converted to pixel perfect react website. Clean UI and responsive on all screen sizes.
                     </div>
                     <div class="langflex">
                         <div>React</div>
-                        <div>scss</div>
+                        <div>sass</div>
                     </div>
-                    <a href="https://envert.netlify.app/" target="_blank"><div class="btn">See Project</div></a>
+                    <div class="btns">
+                        <a href="https://envert.netlify.app" target="_blank"><div class="btn">See Project</div></a>
+                        <a href=""><div class="btn git">Github</div></a>
+                    </div>
                 </div>
               
             </div>
@@ -1091,7 +1103,7 @@
                     <div class="samflex">
                         <div class="word">Dahboard</div>
                         <div class="circle"></div>
-                        <div class="des">frontend Dev</div>
+                        <div class="des">Frontend</div>
                         <div class="circle"></div>
                         <div class="year">2022</div>
                     </div>
@@ -1100,34 +1112,39 @@
                     </div>
                     <div class="langflex">
                         <div>React</div>
-                        <div>Scss</div>
+                        <div>Sass</div>
                     </div>
-                    <a href="https://susdashboard.netlify.app" target="_blank"><div class="btn">See Project</div>
-                </div></a>
+                    <div class="btns">
+                        <a href="https://susdashboard.netlify.app" target="_blank"><div class="btn">See Project</div></a>
+                        <a href=""><div class="btn git">Github</div></a>
+                    </div>
+                </div>
             </div>
             <div class="wrapper4">
                 <div class="right">
-                    <img src="houter.PNG">
+                    <img src="netflix.PNG">
                 </div>
                 <div class="left wordy">
-                    <div class="head">Houter</div>
+                    <div class="head">Netflix clone</div>
                     <div class="samflex">
-                        <div class="word">Housing agent</div>
+                        <div class="word">Netflix</div>
                         <div class="circle"></div>
-                        <div class="des">Front end dev</div>
+                        <div class="des">Frontend</div>
                         <div class="circle"></div>
-                        <div class="year">2021</div>
+                        <div class="year">2022</div>
                     </div>
                     <div class="body">
-                        An housing agency website built to showcase houses and guide users on how to buy or sell from the agency.  
+                        A clone of the netflix website, functioning on all devices. Datas are generated using axios from TMDB and are automatically updated.
                     </div>
                     <div class="langflex">
-                        <div>React</div>
+                        <div>react</div>
                         <div>css</div>
                     </div>
-                    <a href="https://houter.netlify.app" target="_blank"><div class="btn">See Project</div></a>
+                    <div class="btns">
+                        <a href="https://th-netflix-clone.netlify.app/" target="_blank"><div class="btn">See Project</div></a>
+                        <a href=""><div class="btn git">Github</div></a>
+                    </div>
                 </div>
-               
             </div>
             <div class="wrapper5">
                 <div class="left">
@@ -1138,19 +1155,48 @@
                     <div class="samflex">
                         <div class="word">Laundry </div>
                         <div class="circle"></div>
-                        <div class="des">Front End Dev</div>
+                        <div class="des">Frontend</div>
                         <div class="circle"></div>
-                        <div class="year">2021</div>
+                        <div class="year">2022</div>
                     </div>
                     <div class="body">
                         A website for laundry services meant to guide user on how to get their laundrie done, and also for payment purpose
                     </div>
                     <div class="langflex">
                         <div>Html</div>
-                        <div>css</div>
-                        <div>javascript</div>
+                        <div>Css</div>
+                        <div>Javascript</div>
                     </div>
-                    <a href="https://tarialaundry.netlify.app" target="_blank"><div class="btn">See Project</div></a>
+                    <div class="btns">
+                        <a href="https://tarialaundry.netlify.app" target="_blank"><div class="btn">See Project</div></a>
+                        <a href=""><div class="btn git">Github</div></a>
+                    </div>
+                </div>
+            </div>
+            <div class="wrapper6">
+                <div class="right">
+                    <img src="netflix.PNG">
+                </div>
+                <div class="left wordy">
+                    <div class="head">Portfolio</div>
+                    <div class="samflex">
+                        <div class="word">Portfolio</div>
+                        <div class="circle"></div>
+                        <div class="des">Frontend</div>
+                        <div class="circle"></div>
+                        <div class="year">2022</div>
+                    </div>
+                    <div class="body">
+                        Portfolio built with react and Css uing reusable component and responsive layout Fully functioning on all devices
+                    </div>
+                    <div class="langflex">
+                        <div>react</div>
+                        <div>css</div>
+                    </div>
+                    <div class="btns">
+                        <a href="https://reactprt.netlify.app/" target="_blank"><div class="btn">See Project</div></a>
+                        <a href=""><div class="btn git">Github</div></a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -1175,7 +1221,7 @@
                 </div>
                 <div class="right">
                     <div class="top">
-                       <span>Languages</span><span class="icon phone material-icons">navigate_next</span>
+                       <span>Languages</span>
                     </div>
                     <div class="langflex">
                         <div>
@@ -1190,21 +1236,20 @@
                             <img src="Ellipse 1 (2).png">
                             <div>Css</div>
                         </div>
-                        <div>
-                            <img src="react.svg">
-                            <div>React</div>
-                        </div>
+                        
                     </div>
-                    <div class="others">
-                        <div>
-                            <div>Frameworks</div>
-                            <div><span class="icon material-icons">navigate_next</span></div>
-                        </div>
-                        <div>
-                            <div>Skills</div>
-                            <div><span class="icon material-icons">navigate_next</span></div>
-                        </div>
+                        <div class="top">Frameworks</div>
+                        <div class="langflex">
+                            <div>
+                                <img src="react.svg">
+                                <div>React</div>
+                            </div>
+                            <div>
+                                <img src="react.svg">
+                                <div>Sass</div>
+                            </div>
                     </div>
+                    
                 </div>
             </div>
             <div class="box3" id="contact">
@@ -1224,8 +1269,8 @@
                     <div class="head">Contact me</div>
                     <div class="body">If you have an application you are interested in developing,
                         a feature that you need built or a project that needs coding. I'd love to help with it </div>
-                    <div> <input type="text" placeholder="Alexander Mariana" id="name"></div>
-                    <div> <input type="email" placeholder="alexander@gmail.com" id="email"></div>
+                    <div> <input type="text" placeholder="Omotola" id="name"></div>
+                    <div> <input type="email" placeholder="omotolaolaoti@gmail.com" id="email"></div>
                     <div> <textarea name="message" placeholder=" Input your message here "></textarea></div>
                     <div class="btn">Get in Touch</div>
                 </div>
