@@ -117,7 +117,7 @@
             z-index: 15;
             width: 100%;
             justify-content: space-between;
-            padding: 1rem 13rem;
+            padding: 0.5rem 13rem;
             line-height: 2rem;
             font-size: 1.5rem;
             align-items: center;
@@ -1240,7 +1240,7 @@
                         <a href="https://github.com/Olaoti" target="_blank"><div><img src="github.svg"></div></a>
                         <a href="https://fiverr.com/sus_ana" target="_blank"><div><img src="fiverr.svg"></div></a>
                     </div>
-                    <div class="btn">Get My Resume</div>
+                    <a href="MY-CV.pdf" download="Omotola's resume" target="_blank"><div class="btn">Get My Resume</div></a> 
                 </div>
                 <div class="right">
                     <div class="top">
@@ -1293,10 +1293,10 @@
                     <div class="body">If you have an application you are interested in developing,
                         a feature that you need built or a project that needs coding. I'd love to help with it </div>
                     <form name="contact" enctype="multipart/form-data" method="POST" data-netlify="true">
-                        <div> <input type="text" name="name" placeholder="Omotola" id="name"></div>
+                        <div> <input type="text" name="name" placeholder="Omotola" id="name" required></div>
                         <div>
-                        <input type="email" name="email" placeholder="omotolaolaoti@gmail.com" id="email"></div>
-                        <div> <textarea name="message" placeholder=" Input your message here "></textarea></div>
+                        <input type="email" name="email" placeholder="omotolaolaoti@gmail.com" id="email" required></div>
+                        <div> <textarea name="message" placeholder=" Input your message here " required></textarea></div>
                         <button type="submit" class="btn">Get in Touch</button>
                         </div>
                     </form>
