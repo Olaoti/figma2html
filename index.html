@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
         :root {
             --color-primary: #6070FF;
             --color-neutrals: #344563;
@@ -69,7 +70,13 @@
             font-size: 62.5%;
             scroll-behavior: smooth;
         }
-
+        button{
+            outline: 0;
+            border: 0;
+            background-color: inherit;
+            color: inherit;
+            font-size: inherit;
+        }
         .btn {
             color: var(--color-primary2);
             font-size: 1.7rem;
@@ -90,7 +97,7 @@
         }
 
         body {
-            font-family: Poppins, sans-serif;
+            font-family: 'Poppins', sans-serif;
             overflow-x: hidden;
             background-color: var(--color-background);
             font-size: 62.5%;
@@ -119,8 +126,23 @@
 
         header .logo {
             font-size: 1.8rem;
+            color: var(--color-neutrals1);
         }
-
+        .logo-first-letters{
+            color: var(--color-primary2);
+        }
+        .logo-second-letters{
+            color: var(--color-primary);
+        }
+        .logo-third-letters{
+            color: var(--color-neutals6);
+        }
+        header .logo .logotext{
+            font-family: 'Lobster';
+            font-weight: 800;
+            letter-spacing: 4px;
+            font-size: 2.2rem;
+        }
         header .flex {
             display: flex;
         }
@@ -1063,7 +1085,7 @@
                     </div>
                     <div class="btns">
                         <a href="https://houter.netlify.app" target="_blank"><div class="btn">See Project</div></a>
-                        <a href=""><div class="btn git">Github</div></a>
+                        <a href="https://github.com/Olaoti/Houter" target="_blank"><div class="btn git">Github</div></a>
                     </div>
                 </div>
             </div>
@@ -1089,7 +1111,7 @@
                     </div>
                     <div class="btns">
                         <a href="https://envert.netlify.app" target="_blank"><div class="btn">See Project</div></a>
-                        <a href=""><div class="btn git">Github</div></a>
+                        <a href="https://github.com/Olaoti/Enver" target="_blank"><div class="btn git">Github</div></a>
                     </div>
                 </div>
               
@@ -1116,7 +1138,7 @@
                     </div>
                     <div class="btns">
                         <a href="https://susdashboard.netlify.app" target="_blank"><div class="btn">See Project</div></a>
-                        <a href=""><div class="btn git">Github</div></a>
+                        <a href="https://github.com/Olaoti/Dashboard" target="_blank"><div class="btn git">Github</div></a>
                     </div>
                 </div>
             </div>
@@ -1142,7 +1164,7 @@
                     </div>
                     <div class="btns">
                         <a href="https://th-netflix-clone.netlify.app/" target="_blank"><div class="btn">See Project</div></a>
-                        <a href=""><div class="btn git">Github</div></a>
+                        <a href="https://github.com/Olaoti/Netflix-clone" target="_blank"><div class="btn git">Github</div></a>
                     </div>
                 </div>
             </div>
@@ -1169,13 +1191,13 @@
                     </div>
                     <div class="btns">
                         <a href="https://tarialaundry.netlify.app" target="_blank"><div class="btn">See Project</div></a>
-                        <a href=""><div class="btn git">Github</div></a>
+                        <a href="https://github.com/Olaoti/Taria-laundry-website" target="_blank"><div class="btn git">Github</div></a>
                     </div>
                 </div>
             </div>
-            <!--div class="wrapper6">
+            <div class="wrapper6">
                 <div class="right">
-                    <img src="netflix.PNG">
+                    <img src="portfolio.PNG">
                 </div>
                 <div class="left wordy">
                     <div class="head">Portfolio</div>
@@ -1195,10 +1217,10 @@
                     </div>
                     <div class="btns">
                         <a href="https://reactprt.netlify.app/" target="_blank"><div class="btn">See Project</div></a>
-                        <a href=""><div class="btn git">Github</div></a>
+                        <a href="https://github.com/Olaoti/figma2react" target="_blank"><div class="btn git">Github</div></a>
                     </div>
                 </div>
-            </div-->
+            </div>
         </div>
         <div class="footer" id="about">
             <div class="box2">
@@ -1211,7 +1233,7 @@
                     </div>
                     <div class="connect colp">LET'S CONNECT</div>
                     <div class="connectlogos">
-                        <a href="#" target="_blank"><div><img src="twitter.svg"></div></a>
+                        <a href="https:twitter.com/therasusa1" target="_blank"><div><img src="twitter.svg"></div></a>
                         <a href="https://www.linkedin.com/in/omotola-olaoti-323a27240/" target="_blank"><div><img src="linkedin.svg"></div></a>
                         <a href="https://wa.me/+2349069423456" target="_blank"><div><img src="whatsapp.svg"></div></a>
                         <a href="https://github.com/Olaoti" target="_blank"><div><img src="github.svg"></div></a>
@@ -1269,11 +1291,15 @@
                     <div class="head">Contact me</div>
                     <div class="body">If you have an application you are interested in developing,
                         a feature that you need built or a project that needs coding. I'd love to help with it </div>
-                    <div> <input type="text" placeholder="Omotola" id="name"></div>
-                    <div> <input type="email" placeholder="omotolaolaoti@gmail.com" id="email"></div>
-                    <div> <textarea name="message" placeholder=" Input your message here "></textarea></div>
-                    <div class="btn">Get in Touch</div>
-                </div>
+                    <form name="contact" enctype="multipart/form-data" method="POST" data-netlify="true">
+                        <div> <input type="text" name="name" placeholder="Omotola" id="name"></div>
+                        <div>
+                        <input type="email" name="email" placeholder="omotolaolaoti@gmail.com" id="email"></div>
+                        <div> <textarea name="message" placeholder=" Input your message here "></textarea></div>
+                        <button type="submit" class="btn">Get in Touch</button>
+                        </div>
+                    </form>
+
             </div>
         </div>
     </div>
