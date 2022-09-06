@@ -3,14 +3,16 @@
 
 <head>
     <title>Omotola portfolio</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
-        :root {
+        .light_theme {
             --color-primary: #6070FF;
             --color-neutrals: #344563;
             --color-primary4: #EBEBFF;
@@ -20,6 +22,15 @@
             --color-primary2: #396DF2;
             --color-white: #ffffff;
             --color-background: #E5E5E5;
+        }
+        .dark_theme{
+            --color-bg-dark:rgb(21, 21, 73);
+            --color-bg-dark2: rgb(16, 16, 64);
+            --color-dark1: rgb(26, 26, 65);
+            --color-dark-white: white;
+            --color-dark-white2: rgba(255, 255, 255,0.9);
+            --color-dark-primary2: #dfe9ff;
+            --color-dark-primary: #1E50FF;
         }
         a{
             text-decoration: none;
@@ -36,7 +47,6 @@
         .coln1 {
             color: var(--color-neutrals1);
         }
-
         .colp2b {
             background-color: var(--color-primary2);
         }
@@ -65,7 +75,7 @@
             text-transform: capitalize;
         }
         html {
-            width: 100vw;
+            width: 100%;
             height: 100%;
             font-size: 62.5%;
             scroll-behavior: smooth;
@@ -76,6 +86,7 @@
             background-color: inherit;
             color: inherit;
             font-size: inherit;
+            overflow: hidden;
         }
         .btn {
             color: var(--color-primary2);
@@ -90,18 +101,29 @@
             transition: all 300ms ease;
             cursor: pointer;
         }
-
+        .dark_theme .btn{
+            background-color: var(--color-dark-primary);
+            color: var(--color-dark-white);
+            border: 2px solid var(--color-dark-primary);
+        }
         .btn:hover {
             background-color: var(--color-primary);
             color: var(--color-white);
         }
-
+        .dark_theme .btn:hover{
+            color: var(--color-dark-primary);
+           
+        }
         body {
             font-family: 'Poppins', sans-serif;
             overflow-x: hidden;
             background-color: var(--color-background);
             font-size: 62.5%;
-
+            width: 100%;
+        }
+        body.dark_theme{
+            background-color: var(--color-bg-dark2);
+            color: var(--color-dark-white);
         }
         .phone{
             display: none;
@@ -116,6 +138,7 @@
             top: 0;
             z-index: 15;
             width: 100%;
+            max-width: 100vw;
             justify-content: space-between;
             padding: 0.9rem 13rem;
             line-height: 2rem;
@@ -353,9 +376,10 @@
             background-color: var(--color-white);
             border-bottom-left-radius: 80px;
             position: relative;
-
         }
-
+        .dark_theme .container .box1{
+            background-color: var(--color-bg-dark);
+        }
         .container .box1 .innerbox {
             padding: 22rem 26rem 20rem;
             z-index: 9;
@@ -395,13 +419,15 @@
         /****start of samples****/
         .samples>div {
             margin: 14.2rem;
-            background-color: white;
+            background-color: var(--color-white);
             display: grid;
             grid-template-columns: 1fr 1fr;
             padding: 2.4rem;
             border-radius: 2.4rem;
         }
-       
+       .dark_theme .samples>div{
+        background-color: var(--color-dark1);
+       }
         .samples>div .wordy {
             margin: 2.4rem 2.2rem;
         }
@@ -419,7 +445,7 @@
             order: 1;
         }
         .samples img {
-            height: 44.8rem;
+            height: 42rem;
             max-width: 70rem;
             width: 100%;
             border-radius: 8px;
@@ -463,6 +489,9 @@
             border-radius: 50%;
             background-color: var(--color-neutralsn);
         }
+        .dark_theme .samples .samflex .circle{
+            background-color: #344563;
+        }
         
         .samples>div .body {
             font-size: 1.6rem;
@@ -470,7 +499,9 @@
             font-weight: 400;
             color: var(--color-neutrals);
         }
-
+        .dark_theme .samples>div .body{
+            color: var(--color-dark-white2);
+        }
         .samples>div .langflex {
             display: flex;
             align-items: center;
@@ -491,14 +522,19 @@
             background-color: var(--color-primary4);
             border-radius: 0.8rem;
         }
-
+        .dark_theme .samples>div .langflex>div{
+            color: var(--color-dark-primary2);
+            background-color: rgba(0,0,0,0.1);
+        }
         /****End of samples****/
         /*****Beginning of box2 - about**/
         .container .footer {
             background-color: var(--color-white);
             border-top-right-radius: 80px;
         }
-
+        .dark_theme .container .footer{
+            background-color: var(--color-bg-dark);
+        }
         .container .box2 {
             display: grid;
             grid-template-columns: 2fr 3fr;
@@ -522,7 +558,9 @@
             font-weight: 400;
             color: var(--color-neutrals);
         }
-
+        .dark_theme .box2 .body{
+            color: var(--color-dark-white2);
+        }
         .box2 .connect {
             padding: 1.2rem 0 2.6rem;
         }
@@ -564,7 +602,10 @@
             background-color: #F7F7F9;
             border-radius: 0 0.8rem;
         }
-
+        .dark_theme .box2 .right .langflex>div{
+            background-color: var(--color-dark1);
+            color: var(--color-dark-white2);
+        }
         .box2 .right .langflex img {
             height: 4.8rem;
             width: 4.8rem;
@@ -1024,7 +1065,7 @@
     </style>
 </head>
 
-<body>
+<body class="light_theme">
     <header>
         <div class="logo colp"><div class="logotext"><span class="logo-first-letters">Ol</span><span class="logo-second-letters">ao</span><span class="logo-third-letters">ti</span></div>
             <div class="icon-menu"><span></span><span></span><span></span></div> </div>
@@ -1075,27 +1116,27 @@
         <div class="samples" id="portfolio">
             <div class="wrapper1">
                 <div class="left">
-                    <img src="houter.PNG">
+                    <img src="pandanft.PNG">
                 </div>
                 <div class="right wordy">
-                    <div class="head">Houter</div>
+                    <div class="head">PandaNFT</div>
                     <div class="samflex">
-                        <div class="word">Houter</div>
+                        <div class="word">Panda</div>
                         <div class="circle"></div>
                         <div class="des">Frontend</div>
                         <div class="circle"></div>
                         <div class="year">2022</div>
                     </div>
                     <div class="body">
-                        An housing agency website built to showcase houses and guide users on how to buy or sell from the agency.  
+                        A figma design converted to fully responsive nft website with clean filtering and search system. 
                     </div>
                     <div class="langflex">
                         <div>React</div>
-                        <div>css</div>
+                        <div>Scss</div>
                     </div>
                     <div class="btns">
-                        <a href="https://houter.netlify.app" target="_blank"><div class="btn">See Project</div></a>
-                        <a href="https://github.com/Olaoti/Houter" target="_blank"><div class="btn git">Github</div></a>
+                        <a href="https://pandabid.netlify.app" target="_blank"><div class="btn">See Project</div></a>
+                        <a href="https://github.com/Olaoti/pandanft" target="_blank"><div class="btn git">Github</div></a>
                     </div>
                 </div>
             </div>
@@ -1140,11 +1181,12 @@
                         <div class="year">2022</div>
                     </div>
                     <div class="body">
-                        An NFT home page built with react, has reusable components and is responsive on all devices
+                        An NFT home page built with react, has reusable components and is responsive on all devices. Simple Gsap animation added
                     </div>
                     <div class="langflex">
                         <div>React</div>
                         <div>Css</div>
+                        <div>Gsap</div>
                     </div>
                     <div class="btns">
                         <a href="https://gandnft.netlify.app" target="_blank"><div class="btn">See Project</div></a>
@@ -1152,6 +1194,7 @@
                     </div>
                 </div>
             </div>
+         
             <div class="wrapper4">
                 <div class="right">
                     <img src="netflix.PNG">
@@ -1180,9 +1223,35 @@
             </div>
             <div class="wrapper5">
                 <div class="left">
-                    <img src="laundry.PNG">
+                    <img src="houter.PNG">
                 </div>
                 <div class="right wordy">
+                    <div class="head">Houter</div>
+                    <div class="samflex">
+                        <div class="word">Houter</div>
+                        <div class="circle"></div>
+                        <div class="des">Frontend</div>
+                        <div class="circle"></div>
+                        <div class="year">2022</div>
+                    </div>
+                    <div class="body">
+                        An housing agency website built to showcase houses and guide users on how to buy or sell from the agency.  
+                    </div>
+                    <div class="langflex">
+                        <div>React</div>
+                        <div>css</div>
+                    </div>
+                    <div class="btns">
+                        <a href="https://houter.netlify.app" target="_blank"><div class="btn">See Project</div></a>
+                        <a href="https://github.com/Olaoti/Houter" target="_blank"><div class="btn git">Github</div></a>
+                    </div>
+                </div>
+            </div>
+            <div class="wrapper6">
+                <div class="right">
+                    <img src="laundry.PNG">
+                </div>
+                <div class="left wordy">
                     <div class="head">Taria Laundry</div>
                     <div class="samflex">
                         <div class="word">Laundry </div>
@@ -1205,32 +1274,7 @@
                     </div>
                 </div>
             </div>
-            <div class="wrapper6">
-                <div class="right">
-                    <img src="portfolio.PNG">
-                </div>
-                <div class="left wordy">
-                    <div class="head">Portfolio</div>
-                    <div class="samflex">
-                        <div class="word">Portfolio</div>
-                        <div class="circle"></div>
-                        <div class="des">Frontend</div>
-                        <div class="circle"></div>
-                        <div class="year">2022</div>
-                    </div>
-                    <div class="body">
-                        Portfolio built with react and Css uing reusable component and responsive layout Fully functioning on all devices
-                    </div>
-                    <div class="langflex">
-                        <div>react</div>
-                        <div>css</div>
-                    </div>
-                    <div class="btns">
-                        <a href="https://reactprt.netlify.app/" target="_blank"><div class="btn">See Project</div></a>
-                        <a href="https://github.com/Olaoti/figma2react" target="_blank"><div class="btn git">Github</div></a>
-                    </div>
-                </div>
-            </div>
+         
             <div class="wrapper7">
                 <div class="left">
                     <img src="dashboard.png">
@@ -1305,6 +1349,10 @@
                             <div>
                                 <img src="sass.png">
                                 <div>Sass</div>
+                            </div>
+                            <div>
+                                <img src="gsap-greensock.svg">
+                                <div>Gsap</div>
                             </div>
                     </div>
                     
