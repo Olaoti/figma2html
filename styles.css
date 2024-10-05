@@ -428,7 +428,7 @@ background-color: var(--color-dark1);
 .samples>div .btns .git{
     margin-left: 2rem;
 }
-.samples>div:nth-child(2n) .left{
+.samples>div:nth-child(2n) .right{
     order: 1;
 }
 .samples img {
